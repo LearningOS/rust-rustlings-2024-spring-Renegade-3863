@@ -5,8 +5,7 @@
 // Execute `rustlings hint intro2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 fn main() {
-    println!("Hello {}!");
+    let greeting: String = "World".to_string();
+    println!("Hello {greeting}!");
 }

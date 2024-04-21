@@ -7,12 +7,11 @@
 // Execute `rustlings hint move_semantics2` or use the `hint` watch subcommand
 // for a hint.
 
-// I AM NOT DONE
-
 fn main() {
     let vec0 = Vec::new();
-
-    let mut vec1 = fill_vec(vec0);
+    // 这里vec0被移入了vec1,之后vec0被销毁,不可通过vec0调用该向量的函数
+    // rust的Vec类型提供一个.clone()成员函数来生成一个向量对象的拷贝
+    let mut vec1 = fill_vec(vec0.clone());
 
     println!("{} has length {}, with contents: `{:?}`", "vec0", vec0.len(), vec0);
 
